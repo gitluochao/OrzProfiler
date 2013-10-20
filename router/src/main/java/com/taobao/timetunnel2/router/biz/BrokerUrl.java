@@ -5,6 +5,7 @@ public class BrokerUrl implements Comparable<BrokerUrl>{
 	private String host;
 	private String external;
 	private String internal;
+    //好卡
 	
 	public String getId() {
 		return id;
