@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/TimeTunnel/!svn/ver/17/trunk/broker/src/main/java/com/taobao/timetunnel/broker
+END
+ReliableServiceClientException.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/TimeTunnel/!svn/ver/14/trunk/broker/src/main/java/com/taobao/timetunnel/broker/ReliableServiceClientException.java
+END
+EfficientThriftBroker.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/TimeTunnel/!svn/ver/17/trunk/broker/src/main/java/com/taobao/timetunnel/broker/EfficientThriftBroker.java
+END
+ReliableServiceClients.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/TimeTunnel/!svn/ver/17/trunk/broker/src/main/java/com/taobao/timetunnel/broker/ReliableServiceClients.java
+END
+ReliableThriftBroker.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/TimeTunnel/!svn/ver/17/trunk/broker/src/main/java/com/taobao/timetunnel/broker/ReliableThriftBroker.java
+END
+ThriftBroker.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/TimeTunnel/!svn/ver/17/trunk/broker/src/main/java/com/taobao/timetunnel/broker/ThriftBroker.java
+END
+Server.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/TimeTunnel/!svn/ver/14/trunk/broker/src/main/java/com/taobao/timetunnel/broker/Server.java
+END
+TooBigMessageException.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/TimeTunnel/!svn/ver/14/trunk/broker/src/main/java/com/taobao/timetunnel/broker/TooBigMessageException.java
+END

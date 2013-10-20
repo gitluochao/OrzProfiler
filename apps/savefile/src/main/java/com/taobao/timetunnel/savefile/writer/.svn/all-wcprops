@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TimeTunnel/!svn/ver/24/trunk/apps/savefile/src/main/java/com/taobao/timetunnel/savefile/writer
+END
+CronJob.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/TimeTunnel/!svn/ver/24/trunk/apps/savefile/src/main/java/com/taobao/timetunnel/savefile/writer/CronJob.java
+END
+FileWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/TimeTunnel/!svn/ver/24/trunk/apps/savefile/src/main/java/com/taobao/timetunnel/savefile/writer/FileWriter.java
+END
+OutputStreamManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/TimeTunnel/!svn/ver/24/trunk/apps/savefile/src/main/java/com/taobao/timetunnel/savefile/writer/OutputStreamManager.java
+END

@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/exception
+END
+URLException.py
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/exception/URLException.py
+END
+SessionClosingException.py
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/exception/SessionClosingException.py
+END
+ConnectionException.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/exception/ConnectionException.pyc
+END
+SessionClosingException.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/exception/SessionClosingException.pyc
+END
+URLException.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/exception/URLException.pyc
+END
+PublishException.py
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/exception/PublishException.py
+END
+InvalidSessionIdException.py
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/exception/InvalidSessionIdException.py
+END
+PublishException.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/exception/PublishException.pyc
+END
+URLFormatException.py
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/exception/URLFormatException.py
+END
+SessionClosedException.py
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/exception/SessionClosedException.py
+END
+AuthenticateException.py
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/exception/AuthenticateException.py
+END
+URLFormatException.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/exception/URLFormatException.pyc
+END
+SessionClosedException.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/exception/SessionClosedException.pyc
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/exception/__init__.py
+END
+NoSessionAvaliableException.py
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/exception/NoSessionAvaliableException.py
+END
+AuthenticateException.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/exception/AuthenticateException.pyc
+END
+__init__.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/exception/__init__.pyc
+END
+TopicNotCofiguredException.py
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/exception/TopicNotCofiguredException.py
+END
+PubishException.py
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/exception/PubishException.py
+END
+PubishException.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/exception/PubishException.pyc
+END
+ConnectionException.py
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/exception/ConnectionException.py
+END

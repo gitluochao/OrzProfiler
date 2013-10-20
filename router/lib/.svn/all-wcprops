@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/TimeTunnel/!svn/ver/14/trunk/router/lib
+END
+zookeeper-3.2.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/TimeTunnel/!svn/ver/14/trunk/router/lib/zookeeper-3.2.2.jar
+END
+libthrift-0.5.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/TimeTunnel/!svn/ver/14/trunk/router/lib/libthrift-0.5.0.jar
+END
+zk-recipes.jar
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/TimeTunnel/!svn/ver/14/trunk/router/lib/zk-recipes.jar
+END
+timetunnel2-cluster-0.1.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TimeTunnel/!svn/ver/14/trunk/router/lib/timetunnel2-cluster-0.1.0.jar
+END

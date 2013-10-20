@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/TimeTunnel/!svn/ver/26/trunk/router/src/main/resources
+END
+router-start.sh
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TimeTunnel/!svn/ver/21/trunk/router/src/main/resources/router-start.sh
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TimeTunnel/!svn/ver/21/trunk/router/src/main/resources/log4j.properties
+END
+router.properties
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TimeTunnel/!svn/ver/26/trunk/router/src/main/resources/router.properties
+END
+router-stop.sh
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TimeTunnel/!svn/ver/14/trunk/router/src/main/resources/router-stop.sh
+END

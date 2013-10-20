@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/TimeTunnel/!svn/ver/17/trunk/client/java/src/main/java/com/taobao/timetunnel/client/disk
+END
+AsyncQueue.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/TimeTunnel/!svn/ver/14/trunk/client/java/src/main/java/com/taobao/timetunnel/client/disk/AsyncQueue.java
+END
+MessageWapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/TimeTunnel/!svn/ver/17/trunk/client/java/src/main/java/com/taobao/timetunnel/client/disk/MessageWapper.java
+END
+ContentBuffer.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/TimeTunnel/!svn/ver/14/trunk/client/java/src/main/java/com/taobao/timetunnel/client/disk/ContentBuffer.java
+END
+DiskQueueFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/TimeTunnel/!svn/ver/14/trunk/client/java/src/main/java/com/taobao/timetunnel/client/disk/DiskQueueFactory.java
+END
+DataFile.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/TimeTunnel/!svn/ver/14/trunk/client/java/src/main/java/com/taobao/timetunnel/client/disk/DataFile.java
+END
+PreAllocate.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/TimeTunnel/!svn/ver/14/trunk/client/java/src/main/java/com/taobao/timetunnel/client/disk/PreAllocate.java
+END
+FileChannelQueue.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/TimeTunnel/!svn/ver/14/trunk/client/java/src/main/java/com/taobao/timetunnel/client/disk/FileChannelQueue.java
+END
+DiskFileChecker.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/TimeTunnel/!svn/ver/14/trunk/client/java/src/main/java/com/taobao/timetunnel/client/disk/DiskFileChecker.java
+END
+FileChannelQueueImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/TimeTunnel/!svn/ver/17/trunk/client/java/src/main/java/com/taobao/timetunnel/client/disk/FileChannelQueueImpl.java
+END
+FCQMeta.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/TimeTunnel/!svn/ver/14/trunk/client/java/src/main/java/com/taobao/timetunnel/client/disk/FCQMeta.java
+END
+Utils.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/TimeTunnel/!svn/ver/14/trunk/client/java/src/main/java/com/taobao/timetunnel/client/disk/Utils.java
+END

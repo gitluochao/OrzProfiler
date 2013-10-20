@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/TimeTunnel/!svn/ver/24/trunk/apps/dfswriter/rpm
+END
+t_dp_timetunnel_dfswriter-build.sh
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/TimeTunnel/!svn/ver/24/trunk/apps/dfswriter/rpm/t_dp_timetunnel_dfswriter-build.sh
+END
+t_dp_timetunnel_dfswriter-VER.txt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/TimeTunnel/!svn/ver/24/trunk/apps/dfswriter/rpm/t_dp_timetunnel_dfswriter-VER.txt
+END
+t_dp_timetunnel_dfswriter.spec
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/TimeTunnel/!svn/ver/24/trunk/apps/dfswriter/rpm/t_dp_timetunnel_dfswriter.spec
+END

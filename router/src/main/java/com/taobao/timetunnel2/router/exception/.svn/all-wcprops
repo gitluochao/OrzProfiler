@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/TimeTunnel/!svn/ver/25/trunk/router/src/main/java/com/taobao/timetunnel2/router/exception
+END
+ZKCliException.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/TimeTunnel/!svn/ver/25/trunk/router/src/main/java/com/taobao/timetunnel2/router/exception/ZKCliException.java
+END
+ServiceException.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/TimeTunnel/!svn/ver/14/trunk/router/src/main/java/com/taobao/timetunnel2/router/exception/ServiceException.java
+END
+LoadBalanceException.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/TimeTunnel/!svn/ver/25/trunk/router/src/main/java/com/taobao/timetunnel2/router/exception/LoadBalanceException.java
+END

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/util
+END
+SleepUtils.py
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/util/SleepUtils.py
+END
+Compress.py
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/util/Compress.py
+END
+ThreadQueue.py
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/util/ThreadQueue.py
+END
+AuthInfo.py
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/util/AuthInfo.py
+END
+Compress.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/util/Compress.pyc
+END
+ThreadQueue.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/util/ThreadQueue.pyc
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/util/__init__.py
+END
+AuthInfo.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/util/AuthInfo.pyc
+END
+__init__.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/util/__init__.pyc
+END
+SyncMethodClass.py
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/TimeTunnel/!svn/ver/14/trunk/client/python/src/common/util/SyncMethodClass.py
+END

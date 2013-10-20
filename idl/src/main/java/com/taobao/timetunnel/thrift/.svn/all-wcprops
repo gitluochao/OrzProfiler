@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TimeTunnel/!svn/ver/17/trunk/idl/src/main/java/com/taobao/timetunnel/thrift
+END
+routerservice.thrift
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/TimeTunnel/!svn/ver/14/trunk/idl/src/main/java/com/taobao/timetunnel/thrift/routerservice.thrift
+END
+services.thrift
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/TimeTunnel/!svn/ver/17/trunk/idl/src/main/java/com/taobao/timetunnel/thrift/services.thrift
+END

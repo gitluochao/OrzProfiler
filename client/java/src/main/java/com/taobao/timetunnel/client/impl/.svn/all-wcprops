@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/TimeTunnel/!svn/ver/24/trunk/client/java/src/main/java/com/taobao/timetunnel/client/impl
+END
+Config.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/TimeTunnel/!svn/ver/23/trunk/client/java/src/main/java/com/taobao/timetunnel/client/impl/Config.java
+END
+Tunnel.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/TimeTunnel/!svn/ver/14/trunk/client/java/src/main/java/com/taobao/timetunnel/client/impl/Tunnel.java
+END
+SubscribeFutureImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/TimeTunnel/!svn/ver/24/trunk/client/java/src/main/java/com/taobao/timetunnel/client/impl/SubscribeFutureImpl.java
+END
+Authentication.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/TimeTunnel/!svn/ver/14/trunk/client/java/src/main/java/com/taobao/timetunnel/client/impl/Authentication.java
+END

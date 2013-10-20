@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/TimeTunnel/!svn/ver/17/trunk/broker/src/main/java/com/taobao/timetunnel/swap
+END
+NByteBufferFreezer.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/TimeTunnel/!svn/ver/14/trunk/broker/src/main/java/com/taobao/timetunnel/swap/NByteBufferFreezer.java
+END
+ByteBufferFreezer.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/TimeTunnel/!svn/ver/17/trunk/broker/src/main/java/com/taobao/timetunnel/swap/ByteBufferFreezer.java
+END
+Freezer.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/TimeTunnel/!svn/ver/14/trunk/broker/src/main/java/com/taobao/timetunnel/swap/Freezer.java
+END
+ByteBufferFreezers.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/TimeTunnel/!svn/ver/15/trunk/broker/src/main/java/com/taobao/timetunnel/swap/ByteBufferFreezers.java
+END
+ByteBufferPoint.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/TimeTunnel/!svn/ver/14/trunk/broker/src/main/java/com/taobao/timetunnel/swap/ByteBufferPoint.java
+END
+Chunk.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/TimeTunnel/!svn/ver/14/trunk/broker/src/main/java/com/taobao/timetunnel/swap/Chunk.java
+END
+FileChunk.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/TimeTunnel/!svn/ver/14/trunk/broker/src/main/java/com/taobao/timetunnel/swap/FileChunk.java
+END
+Buffer.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/TimeTunnel/!svn/ver/14/trunk/broker/src/main/java/com/taobao/timetunnel/swap/Buffer.java
+END
+Point.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/TimeTunnel/!svn/ver/14/trunk/broker/src/main/java/com/taobao/timetunnel/swap/Point.java
+END
+BufferImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/TimeTunnel/!svn/ver/14/trunk/broker/src/main/java/com/taobao/timetunnel/swap/BufferImpl.java
+END

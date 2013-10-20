@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/TimeTunnel/!svn/ver/14/trunk/idl/src/main/java/com/taobao/timetunnel/thrift/gen
+END
+InternalService.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/TimeTunnel/!svn/ver/14/trunk/idl/src/main/java/com/taobao/timetunnel/thrift/gen/InternalService.java
+END
+ExternalService.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/TimeTunnel/!svn/ver/14/trunk/idl/src/main/java/com/taobao/timetunnel/thrift/gen/ExternalService.java
+END
+Failure.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/TimeTunnel/!svn/ver/14/trunk/idl/src/main/java/com/taobao/timetunnel/thrift/gen/Failure.java
+END

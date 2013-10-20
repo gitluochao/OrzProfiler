@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/TimeTunnel/!svn/ver/24/trunk/client/java/src/main/java/com/taobao/timetunnel/client/sub
+END
+VirtualSubConnectionFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/TimeTunnel/!svn/ver/14/trunk/client/java/src/main/java/com/taobao/timetunnel/client/sub/VirtualSubConnectionFactory.java
+END
+PhysicalSubConnectionPool.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/TimeTunnel/!svn/ver/14/trunk/client/java/src/main/java/com/taobao/timetunnel/client/sub/PhysicalSubConnectionPool.java
+END
+VirtualSubConnection.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/TimeTunnel/!svn/ver/24/trunk/client/java/src/main/java/com/taobao/timetunnel/client/sub/VirtualSubConnection.java
+END
+PhysicalSubConnection.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/TimeTunnel/!svn/ver/14/trunk/client/java/src/main/java/com/taobao/timetunnel/client/sub/PhysicalSubConnection.java
+END

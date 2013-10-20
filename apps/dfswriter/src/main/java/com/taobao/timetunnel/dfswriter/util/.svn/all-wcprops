@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TimeTunnel/!svn/ver/24/trunk/apps/dfswriter/src/main/java/com/taobao/timetunnel/dfswriter/util
+END
+NetUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/TimeTunnel/!svn/ver/24/trunk/apps/dfswriter/src/main/java/com/taobao/timetunnel/dfswriter/util/NetUtil.java
+END
+DateUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/TimeTunnel/!svn/ver/24/trunk/apps/dfswriter/src/main/java/com/taobao/timetunnel/dfswriter/util/DateUtil.java
+END
+FileUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/TimeTunnel/!svn/ver/24/trunk/apps/dfswriter/src/main/java/com/taobao/timetunnel/dfswriter/util/FileUtil.java
+END
+TimerUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/TimeTunnel/!svn/ver/24/trunk/apps/dfswriter/src/main/java/com/taobao/timetunnel/dfswriter/util/TimerUtil.java
+END
+HDFSWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/TimeTunnel/!svn/ver/24/trunk/apps/dfswriter/src/main/java/com/taobao/timetunnel/dfswriter/util/HDFSWriter.java
+END

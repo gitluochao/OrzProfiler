@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/TimeTunnel/!svn/ver/23/trunk/client/python/rpm
+END
+t_dp_timetunnel_pclient-VER.txt
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/TimeTunnel/!svn/ver/23/trunk/client/python/rpm/t_dp_timetunnel_pclient-VER.txt
+END
+t_dp_timetunnel_pclient.spec
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/TimeTunnel/!svn/ver/15/trunk/client/python/rpm/t_dp_timetunnel_pclient.spec
+END
+t_dp_timetunnel_pclient-build.sh
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/TimeTunnel/!svn/ver/23/trunk/client/python/rpm/t_dp_timetunnel_pclient-build.sh
+END

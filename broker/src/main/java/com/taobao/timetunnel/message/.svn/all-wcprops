@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/TimeTunnel/!svn/ver/17/trunk/broker/src/main/java/com/taobao/timetunnel/message
+END
+Message.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/TimeTunnel/!svn/ver/14/trunk/broker/src/main/java/com/taobao/timetunnel/message/Message.java
+END
+ByteBufferMessageCompactor.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/TimeTunnel/!svn/ver/17/trunk/broker/src/main/java/com/taobao/timetunnel/message/ByteBufferMessageCompactor.java
+END
+ByteBufferMessageFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/TimeTunnel/!svn/ver/14/trunk/broker/src/main/java/com/taobao/timetunnel/message/ByteBufferMessageFactory.java
+END
+MessageFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/TimeTunnel/!svn/ver/14/trunk/broker/src/main/java/com/taobao/timetunnel/message/MessageFactory.java
+END
+Category.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/TimeTunnel/!svn/ver/15/trunk/broker/src/main/java/com/taobao/timetunnel/message/Category.java
+END
+Freezable.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TimeTunnel/!svn/ver/14/trunk/broker/src/main/java/com/taobao/timetunnel/message/Freezable.java
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/TimeTunnel/!svn/ver/15/trunk/broker/src/main/java/com/taobao/timetunnel/reliable
+END
+Reliable.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/TimeTunnel/!svn/ver/14/trunk/broker/src/main/java/com/taobao/timetunnel/reliable/Reliable.java
+END
+ReliableService.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/TimeTunnel/!svn/ver/14/trunk/broker/src/main/java/com/taobao/timetunnel/reliable/ReliableService.java
+END
+ByteBufferMessageReliables.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/TimeTunnel/!svn/ver/15/trunk/broker/src/main/java/com/taobao/timetunnel/reliable/ByteBufferMessageReliables.java
+END
