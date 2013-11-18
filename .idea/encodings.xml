@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/broker" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/router" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/router/lib/zk-recipes.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/router/lib/zookeeper-3.2.2.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/router/src/main/java/com/zero/profiler/router/exception/ZKCliException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/router/src/main/java/com/zero/profiler/router/loadbalance/RouterContext.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thrift-idl" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
+

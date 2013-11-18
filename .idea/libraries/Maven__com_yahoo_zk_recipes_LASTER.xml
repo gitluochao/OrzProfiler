@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Maven: com.yahoo:zk-recipes:LASTER">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/router/lib/zk-recipes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Desktop/recipes/java" />
+    </SOURCES>
+  </library>
+</component>
