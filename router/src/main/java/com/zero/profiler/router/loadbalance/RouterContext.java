@@ -10,16 +10,16 @@ import java.util.List;
  * Time: 下午6:02
  */
 public class RouterContext implements Context,Visitor{
-
     public RouterContext() {
         init();
     }
+
 
     //懒工厂
    private static class Holder{
        static  final RouterContext routerContext = new RouterContext();
    }
-   private RouterContext getRouterContext(){
+   public static RouterContext getRouterContext(){
        return Holder.routerContext;
    }
    void init(){
