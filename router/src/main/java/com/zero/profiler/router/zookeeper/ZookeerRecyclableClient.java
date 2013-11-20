@@ -1,5 +1,6 @@
 package com.zero.profiler.router.zookeeper;
 
+import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.ZooKeeper;
 
 
@@ -9,13 +10,13 @@ import java.util.Map;
 /**
  * User: luochao
  * Date: 13-10-29
- * Time: 涓嫔崃5:36
+ * Time: 下午5.36
  */
 public class ZookeerRecyclableClient {
     private ZooKeeper zk;
     private Map<Thread,String> watchPath = new HashMap<Thread, String>();
     private Map<Thread,Visitor> visitors = new HashMap<Thread, Visitor>();
-
+    //decorator patterner
     public ZookeerRecyclableClient(ZooKeeper zk) {
         this.zk = zk;
     }
@@ -73,6 +74,19 @@ public class ZookeerRecyclableClient {
         watchPath.put(watchThread,path);
         visitors.put(watchThread,visitor);
         watchThread.start();
+    }
+    public void createPathRecursively(String path,CreateMode createMode){
+        String[] pathSplit = path.split("/");
+        String pathAbsolute = "";
+        for(String pathStr:pathSplit){
+            if("".equals(pathStr)){
+                continue;
+            }
+            pathAbsolute += "/";
+            pathAbsolute += pathStr;
+           //todo zk.(pathAbsolute,createMode);
+
+        }
     }
 
 

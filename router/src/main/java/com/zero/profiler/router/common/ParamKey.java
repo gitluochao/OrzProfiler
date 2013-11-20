@@ -29,6 +29,21 @@ public abstract class ParamKey {
     }
     //server param
     public static class Server{
+        public enum ServerClass{
+            NOBLOCK("com.zero.profiler.router.service.NonBlockServerEngine"),
+            TREADPOOL("com.zero.profiler.router.service.ThreadPoolServerEngine"),
+            TEST("com.zero.profiler.router.service.SampleServerEngine");
+            private String className;
+
+            private ServerClass(String className) {
+                this.className = className;
+            }
+
+            public String getClassName() {
+                return className;
+            }
+        }
+        public static final String serverType = "SERVER_TYPE";
         public static final String bindAdr = "BIND_ADR";
         public static final String port = "PORT";
         public static final String maxWorkerThreads  = "MAX_WORK_THREADS";

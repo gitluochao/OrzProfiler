@@ -6,6 +6,7 @@
     <JAVADOC />
     <SOURCES>
       <root url="file://$USER_HOME$/Desktop/recipes/java" />
+      <root url="file://E:/source/recipes/lock/src/java" />
     </SOURCES>
   </library>
 </component>

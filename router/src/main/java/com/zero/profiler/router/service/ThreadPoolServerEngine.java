@@ -1,6 +1,5 @@
 package com.zero.profiler.router.service;
 
-import com.zero.profiler.router.RouterService;
 import com.zero.profiler.router.exception.ServiceException;
 import com.zero.profiler.router.loadbalance.RouterContext;
 import org.apache.log4j.Logger;
@@ -27,7 +26,6 @@ public class ThreadPoolServerEngine extends ServerEngine {
             InetAddress address = InetAddress.getByName(serverProperties.getBindadr());
             InetSocketAddress socketAddress  = new InetSocketAddress(address,serverProperties.getPort());
             TServerTransport tServerTransport = new TServerSocket(socketAddress,serverProperties.getCliTimeout());
-            RouterService.Iface handler = new
         }catch (Exception e){
 
         }

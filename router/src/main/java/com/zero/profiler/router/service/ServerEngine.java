@@ -85,6 +85,19 @@ public abstract class ServerEngine implements Server{
             doStop();
         }
     }
+
+    public boolean isStarted() {
+        return started.get();
+    }
+
+    public boolean isStoped() {
+        return stoped.get();
+    }
+
+    public boolean isShutdown() {
+        return shutdown.get();
+    }
+
     public abstract void doStart() throws ServiceException;
     public abstract void doStop() throws ServiceException;
     public abstract void doServer() throws ServiceException;

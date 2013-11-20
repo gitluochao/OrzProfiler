@@ -10,7 +10,8 @@ import java.util.Properties;
  * Time: 涓嫔崃5:58
  */
 public class RouterConstants {
-    public  static final String ROUTER_PATH = "router.properties";
+    public static final String ROUTER_PATH = "router.properties";
+    public static final String DEFAULT_SEVER_TYPE = "BLOCK";
 
 
     public static void main(String[] args) throws ServiceException{

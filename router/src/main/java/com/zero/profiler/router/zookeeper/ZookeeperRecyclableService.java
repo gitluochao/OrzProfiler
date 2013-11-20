@@ -10,13 +10,13 @@ import java.util.concurrent.CountDownLatch;
 /**
  * User: luochao
  * Date: 13-10-30
- * Time: 涓嫔崃2:36
- * 閲嶈繛链嶅姟閲嶅惎watch澶勭悊
+ * Time: 下午 2:36
+ *
  */
 public abstract class ZookeeperRecyclableService  implements Watcher {
     private final static Logger log = Logger.getLogger(ZookeeperRecyclableService.class);
-    public ZooKeeper zooKeeper;
-    public ZookeerRecyclableClient zookeeperClient;
+    private ZooKeeper zooKeeper;
+    private ZookeerRecyclableClient zookeeperClient;
     private String serverList;
     private int sessionTimeOut;
     private CountDownLatch connectedSign = new CountDownLatch(1);
@@ -35,6 +35,7 @@ public abstract class ZookeeperRecyclableService  implements Watcher {
         this.serverList = serverList;
         this.sessionTimeOut = sessionTimeOut;
         this.listener = listener;
+        this.connect();
     }
     public void connect(){
         try{
@@ -94,6 +95,19 @@ public abstract class ZookeeperRecyclableService  implements Watcher {
         }
 
     }
+
+    public ZooKeeper getZooKeeper() {
+        return zooKeeper;
+    }
+
+    public ZookeerRecyclableClient getZookeeperClient() {
+        return zookeeperClient;
+    }
+
+    public void setZookeeperClient(ZookeerRecyclableClient zookeeperClient) {
+        this.zookeeperClient = zookeeperClient;
+    }
+
     public interface  DataMonitorListener{
 
         void onNodeDataChanged(String path);

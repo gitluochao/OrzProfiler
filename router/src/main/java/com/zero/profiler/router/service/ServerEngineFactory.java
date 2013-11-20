@@ -13,13 +13,14 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class ServerEngineFactory {
     private static final Map<String,ServerEngine> engines = new ConcurrentHashMap<String,ServerEngine>();
-    public ServerEngine getInstance(String engineName) throws  ServiceException{
+    public static  ServerEngine getInstance(String engineName) throws  ServiceException{
         ServerEngine engine = null;
          if(engines.get(engineName)!=null){
              engine = engines.get(engineName);
          }else{
              try {
                  engine =(ServerEngine) Class.forName(engineName).newInstance();
+
                  engines.put(engineName,engine);
              }catch (ClassNotFoundException e){
                  throw  new ServiceException("get engine  error cause by  class not found",e.getCause());
