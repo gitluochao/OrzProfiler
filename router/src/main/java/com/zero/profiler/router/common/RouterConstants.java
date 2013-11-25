@@ -7,7 +7,7 @@ import java.util.Properties;
 /**
  * User: luochao
  * Date: 13-10-29
- * Time: 涓嫔崃5:58
+ * Time: 下午5:58
  */
 public class RouterConstants {
     public static final String ROUTER_PATH = "router.properties";

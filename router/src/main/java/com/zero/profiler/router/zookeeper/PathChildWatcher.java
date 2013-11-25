@@ -19,7 +19,7 @@ import java.util.concurrent.Semaphore;
  * User: luochao
  * when ChildNode changed update keeperSize
  * Date: 13-10-30
- * Time: 涓嫔崃4:32
+ * Time: 下午4:32
  */
 public class PathChildWatcher extends ProtocolSupport {
     private static final Logger log = Logger.getLogger(PathChildWatcher.class);
@@ -78,7 +78,7 @@ public class PathChildWatcher extends ProtocolSupport {
                         }
                     }
                 }else {
-                    //znode鎹彂鐢熷彉鍖?
+                    //znode?
                     log.info("znode child data changed :"+eventType);
                     int prvCount = 0;
                     int newCount = 0;

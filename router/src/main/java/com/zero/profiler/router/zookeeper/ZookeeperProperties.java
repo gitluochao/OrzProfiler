@@ -23,7 +23,7 @@ public class ZookeeperProperties {
         if(prop != null){
             try{
                     this.serverList = Util.getStrParam("serverList",prop.getProperty(ParamKey.ZKService.hosts),Util.getHostName(),true);
-                    this.zkTimeOut = Util.getIntParam("zkTimeOut",prop.getProperty(ParamKey.ZKService.timeOut),3000,3000,50000,true);
+                    this.zkTimeOut = Util.getIntParam("zkTimeOut",prop.getProperty(ParamKey.ZKService.timeOut),3000,3000,500000,true);
                     this.zkPoolSize = Util.getIntParam("zkPoolSize",prop.getProperty(ParamKey.ZKService.poolSize),1,1,500);
                     this.zkRetryCount = Util.getIntParam("zkRetryCount",prop.getProperty(ParamKey.ZKClient.zkRetryCout),1,1,20);
                     this.zkRetryInterval = Util.getIntParam("zkRetryInterval",prop.getProperty(ParamKey.ZKClient.zkRetryInterval),1000,10,1000);

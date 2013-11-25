@@ -13,7 +13,7 @@ import java.util.Properties;
  */
 public class ZookeeperPoolFactory {
    private final static Logger log = Logger.getLogger(ZookeeperPoolFactory.class);
-   private List<ZookeeperOperation> pool;
+   private List<ZookeeperExecute> pool;
    private final static ZookeeperPoolFactory instance = new ZookeeperPoolFactory();
    private int poolSize = 1;
    private int cursor = 0;//
@@ -28,18 +28,19 @@ public class ZookeeperPoolFactory {
             Properties prop = Util.getConf();
             ZookeeperProperties zkProp = new ZookeeperProperties(prop);
             int poolSize =zkProp.getZkPoolSize();
-            pool = new ArrayList<ZookeeperOperation>(poolSize);
+            pool = new ArrayList<ZookeeperExecute>(poolSize);
             for(int i=0;i<poolSize;i++){
-                ZookeeperOperation zookeeperOperation = new ZookeeperOperation(zkProp);
+                ZookeeperExecute zookeeperOperation = new ZookeeperExecute(zkProp);
                 pool.add(zookeeperOperation);
             }
         } catch (Exception e) {
             log.error("load router.properties error", e);
         }
     }
-    public synchronized ZookeeperOperation getZookeeperClient(){
-        ZookeeperOperation zookeeperOperation = null;
+    public synchronized ZookeeperExecute getZookeeperClient(){
+        ZookeeperExecute zookeeperOperation = null;
         if(cursor<poolSize){
+            zookeeperOperation = pool.get(cursor);
             cursor+=1;
         }else{
             cursor = 0;

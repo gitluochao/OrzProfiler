@@ -6,7 +6,7 @@ import com.zero.profiler.router.common.Util;
 import com.zero.profiler.router.service.ServerEngine;
 import com.zero.profiler.router.service.ServerEngineFactory;
 import com.zero.profiler.router.zookeeper.Visitor;
-import com.zero.profiler.router.zookeeper.ZookeeperOperation;
+import com.zero.profiler.router.zookeeper.ZookeeperExecute;
 import com.zero.profiler.router.zookeeper.ZookeeperPoolFactory;
 
 import java.util.List;
@@ -85,7 +85,7 @@ public class RouterContext implements Context,Visitor{
     private void synRouter(boolean exitFlag){
         try{
             if(syning.compareAndSet(false,true)){
-                 ZookeeperOperation  zkClient = zkFactory.getZookeeperClient();
+                 ZookeeperExecute zkClient = zkFactory.getZookeeperClient();
 
             }
         }catch (Exception e){

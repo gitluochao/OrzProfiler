@@ -13,7 +13,7 @@ import java.util.concurrent.Semaphore;
 /**
  * User: luochao
  * Date: 13-10-30
- * Time: 涓嫔崃4:32
+ * Time: 下午4:32
  */
 public class PathExistWatcher extends ProtocolSupport{
     private final static Logger log = Logger.getLogger(PathExistWatcher.class);

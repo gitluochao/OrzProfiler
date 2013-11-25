@@ -37,7 +37,7 @@ public abstract class ZookeeperRecyclableService  implements Watcher {
         this.listener = listener;
         this.connect();
     }
-    public void connect(){
+    private void connect(){
         try{
             zooKeeper = new ZooKeeper(serverList,sessionTimeOut,this);
             zookeeperClient = new ZookeerRecyclableClient(zooKeeper);
@@ -64,6 +64,7 @@ public abstract class ZookeeperRecyclableService  implements Watcher {
         //watch rpc
         if(event.getType() == Event.EventType.None ) {
             if(event.getState() == Event.KeeperState.SyncConnected){
+                log.info("connection .....ok");
                 connectedSign.countDown();
             }else if (event.getState() == Event.KeeperState.Expired){
                 log.info("lose connect to cluster permenantly");

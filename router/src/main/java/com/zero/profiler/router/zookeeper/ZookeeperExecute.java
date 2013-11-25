@@ -11,14 +11,14 @@ import java.util.List;
  * Date: 13-11-15
  * Time: 下午3:58
  */
-public class ZookeeperOperation extends  ZookeeperRecyclableService implements ZookeeperService {
+public class ZookeeperExecute extends  ZookeeperRecyclableService implements ZookeeperService {
     //decorator
     private ZookeerRecyclableClient zkl = null;
     /*lose connection retry param*/
     public  int retryCount;
     public  int retryInterval;
-    public ZookeeperOperation(ZookeeperProperties zookeeperProperties){
-        super(zookeeperProperties.getServerList(),zookeeperProperties.getZkPoolSize());
+    public ZookeeperExecute(ZookeeperProperties zookeeperProperties){
+        super(zookeeperProperties.getServerList(),zookeeperProperties.getZkTimeOut());
         this.zkl = getZookeeperClient();
         this.retryCount = zookeeperProperties.getZkRetryCount();
         this.retryInterval = zookeeperProperties.getZkRetryInterval();

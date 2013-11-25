@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.zero.profiler.router.exception.ServiceException;
 import org.apache.log4j.Logger;
 
-import javax.mail.Address;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.InetAddress;
@@ -16,7 +16,7 @@ import java.util.Properties;
 /**
  * User: luochao
  * Date: 13-10-29
- * Time: 阌熸枻鎷烽敓鏂ゆ嫹5:48
+ * Time: 下午5:48
  */
 public class Util {
     private final static Logger logger = Logger.getLogger(Util.class);
