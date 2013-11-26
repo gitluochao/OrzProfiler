@@ -1,5 +1,6 @@
 package org.apache.zookeeper.recipes;
 
+import org.apache.log4j.Logger;
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.ZooKeeper;
@@ -11,6 +12,7 @@ import org.apache.zookeeper.recipes.lock.ZooKeeperOperation;
  * Time: 下午2:03
  */
 public class PathCreator extends ProtocolSupport {
+    private final static Logger log = Logger.getLogger(PathCreator.class);
     private String path;
     private ZooKeeper zookeeper;
     private CreateMode createMode;
@@ -42,7 +44,13 @@ public class PathCreator extends ProtocolSupport {
             return flag;
         }
     }
-    public void create() throws KeeperException,InterruptedException{
-        this.retryOperation(new CreatePathOperation());
+    public void create() {
+        try{
+            this.retryOperation(new CreatePathOperation());
+        }catch (KeeperException e){
+            log.error(e);
+        }catch (InterruptedException e){
+            log.error(e);
+        }
     }
 }

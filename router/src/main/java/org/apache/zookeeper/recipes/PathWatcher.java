@@ -59,9 +59,9 @@ public class PathWatcher extends ProtocolSupport{
         try{
            return this.retryOperation(new PathWatcherOperation());
         }catch (KeeperException e){
-           log.error("lost connection to zookeeper");
+           log.error("lost connection to zookeeper",e);
         }catch (InterruptedException e){
-           log.error("lost connection to zookeeper");
+           log.error("lost connection to zookeeper",e);
         }
         return false;
     }

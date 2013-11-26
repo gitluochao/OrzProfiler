@@ -8,16 +8,16 @@ import java.util.List;
 /**
  * User: luochao
  * Date: 13-10-29
- * Time: 涓嫔崃6:36
+ * Time: 上午6:36
  */
 public interface ZookeeperService {
     public String getData(String path) throws ZKCliException;
 
     public String getData(String path,AsyncCallback.DataCallback cb,Object ctx) throws  ZKCliException;
 
-    public void   setData(String path) throws ZKCliException;
+    public void   setData(String path,String data) throws ZKCliException;
 
-    public void   setData(String path,AsyncCallback.StatCallback cb,Object ctx) throws ZKCliException;
+    public void   setData(String path,String data,AsyncCallback.StatCallback cb,Object ctx) throws ZKCliException;
 
     public List<String> getChildren(String path) throws  ZKCliException;
 

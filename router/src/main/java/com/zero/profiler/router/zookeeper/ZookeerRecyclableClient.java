@@ -2,6 +2,8 @@ package com.zero.profiler.router.zookeeper;
 
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.ZooKeeper;
+import org.apache.zookeeper.recipes.PathCreator;
+import org.apache.zookeeper.recipes.PathDataGetter;
 
 
 import java.util.HashMap;
@@ -84,9 +86,16 @@ public class ZookeerRecyclableClient {
             }
             pathAbsolute += "/";
             pathAbsolute += pathStr;
-           //todo zk.(pathAbsolute,createMode);
-
+            PathCreator pathCreator = new PathCreator(getZk(),path,createMode,null);
+            pathCreator.create();
         }
+    }
+    public String getStrPathData(String path){
+        byte[] data = new PathDataGetter(zk,path).getData();
+        if(data!=null){
+            return new String(data);
+        }
+        return null;
     }
 
 

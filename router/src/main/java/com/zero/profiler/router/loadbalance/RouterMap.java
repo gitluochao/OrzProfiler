@@ -1,6 +1,7 @@
 package com.zero.profiler.router.loadbalance;
 
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.List;
 
 /**
  * User: luochao
@@ -9,13 +10,15 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class RouterMap {
     private final static  RouterMap instance = new RouterMap();
-
     /**
      * topic / broker circle
      */
     private final static ConcurrentHashMap<String,RouterCircle> routerMap = new ConcurrentHashMap<String, RouterCircle>();
+    private final static ConcurrentHashMap<String,String> authMap = new ConcurrentHashMap<String, String>();
 
-    public RouterMap getInstance(){
+
+    public static RouterMap getInstance(){
         return  instance;
     }
+
 }

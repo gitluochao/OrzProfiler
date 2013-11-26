@@ -12,8 +12,4 @@ public class RouterCircle {
     private Map<String ,RouterNode> circle = new HashMap<String, RouterNode>();
     private String topic;
     private String cursor;
-
-
-
-
 }

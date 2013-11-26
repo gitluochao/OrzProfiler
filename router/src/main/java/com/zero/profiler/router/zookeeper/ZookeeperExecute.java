@@ -1,10 +1,20 @@
 package com.zero.profiler.router.zookeeper;
 
 import com.zero.profiler.router.exception.ZKCliException;
+import org.apache.log4j.Logger;
 import org.apache.zookeeper.AsyncCallback;
+import org.apache.zookeeper.CreateMode;
+import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.ZooKeeper;
+import org.apache.zookeeper.data.Stat;
+import org.apache.zookeeper.recipes.PathDataGetter;
+import org.apache.zookeeper.recipes.PathDataSetter;
+import org.apache.zookeeper.recipes.PathExistCheck;
+import org.apache.zookeeper.recipes.PathVistor;
 
 import java.util.List;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 /**
  * User: luochao
@@ -12,6 +22,7 @@ import java.util.List;
  * Time: 下午3:58
  */
 public class ZookeeperExecute extends  ZookeeperRecyclableService implements ZookeeperService {
+    private final static Logger log = Logger.getLogger(ZookeeperExecute.class);
     //decorator
     private ZookeerRecyclableClient zkl = null;
     /*lose connection retry param*/
@@ -44,7 +55,6 @@ public class ZookeeperExecute extends  ZookeeperRecyclableService implements Zoo
                     return;
                 }
                 count--;
-
             }
         }
         if(isConnecting()){
@@ -62,20 +72,39 @@ public class ZookeeperExecute extends  ZookeeperRecyclableService implements Zoo
     }
     @Override
     public String getData(String path) throws ZKCliException {
-        return null;
+         checkOpenConnecton();
+         return zkl.getStrPathData(path);
     }
 
     @Override
-    public String getData(String path, AsyncCallback.DataCallback cb, Object ctx) throws ZKCliException {
-        return null;
+    public String getData(String path , AsyncCallback.DataCallback cb, Object ctx) throws ZKCliException {
+        checkOpenConnecton();
+        GetDataCallback callback = new GetDataCallback();
+        CountDownLatch signal = new CountDownLatch(1);
+        zkl.getZk().getData(path,false,callback,signal);
+        return callback.getResult();
     }
 
     @Override
-    public void setData(String path) throws ZKCliException {
+    public void setData(String path,String data) throws ZKCliException {
+        PathExistCheck pathExistCheck = new PathExistCheck(zkl.getZk(),path,null);
+        if(!pathExistCheck.exist()){
+            zkl.createPathRecursively(path, CreateMode.PERSISTENT);
+        }
+        PathDataSetter pathDataSetter = new PathDataSetter(zkl.getZk(),path,null);
     }
 
     @Override
-    public void setData(String path, AsyncCallback.StatCallback cb, Object ctx) throws ZKCliException {
+    public void setData(String path,String data, AsyncCallback.StatCallback cb, Object ctx) throws ZKCliException {
+        checkOpenConnecton();
+        SetDataCallback callback = new SetDataCallback();
+        CountDownLatch signal = new CountDownLatch(1);
+        zkl.getZk().setData(path,data.getBytes(),-1,callback,signal);
+        try {
+            signal.await(2, TimeUnit.SECONDS);
+        }catch (Exception e){
+            log.error(e);
+        }
     }
 
     @Override
@@ -98,5 +127,40 @@ public class ZookeeperExecute extends  ZookeeperRecyclableService implements Zoo
 
     @Override
     public void close() throws ZKCliException {
+    }
+
+
+    class SetDataCallback implements AsyncCallback.StatCallback {
+        @Override
+        public void processResult(int rc, String path, Object ctx, Stat stat) {
+            KeeperException.Code code = KeeperException.Code.get(rc);
+            if(code.equals(KeeperException.Code.OK)){
+
+            }else if(code.equals(KeeperException.Code.SESSIONEXPIRED)){
+                reconnect();
+            }
+        }
+    }
+    class GetDataCallback implements AsyncCallback.DataCallback{
+        private String result;
+
+        String getResult() {
+            return result;
+        }
+
+        @Override
+        public void processResult(int rc, String path, Object ctx, byte[] data, Stat stat) {
+            KeeperException.Code code = KeeperException.Code.get(rc);
+            CountDownLatch countDownLatch = (CountDownLatch)ctx;
+            if(code.equals(KeeperException.Code.OK)){
+                if(data!=null){
+                    result = new String(data);
+                }
+            }
+            if(code.equals(KeeperException.Code.SESSIONEXPIRED)){
+                reconnect();
+            }
+            countDownLatch.countDown();
+        }
     }
 }

@@ -22,6 +22,7 @@ public class RouterContext implements Context,Visitor{
     private Properties appParam;
     private ZookeeperPoolFactory zkFactory = ZookeeperPoolFactory.getInstance();
     private AtomicBoolean syning = new AtomicBoolean(false);
+    private RouterMap routerMap = RouterMap.getInstance();
     private String engineType;
     public RouterContext() {
         init();
