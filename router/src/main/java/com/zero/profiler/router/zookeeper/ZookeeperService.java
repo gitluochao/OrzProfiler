@@ -2,6 +2,7 @@ package com.zero.profiler.router.zookeeper;
 
 import com.zero.profiler.router.exception.ZKCliException;
 import org.apache.zookeeper.AsyncCallback;
+import org.apache.zookeeper.KeeperException;
 
 import java.util.List;
 
@@ -19,7 +20,7 @@ public interface ZookeeperService {
 
     public void   setData(String path,String data,AsyncCallback.StatCallback cb,Object ctx) throws ZKCliException;
 
-    public List<String> getChildren(String path) throws  ZKCliException;
+    public List<String> getChildren(String path) throws ZKCliException, KeeperException, InterruptedException;
 
     public List<String> getChildren(String path,AsyncCallback.ChildrenCallback cb,Object ctz) throws  ZKCliException;
 

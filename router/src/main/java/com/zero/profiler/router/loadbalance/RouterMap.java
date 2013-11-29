@@ -14,6 +14,8 @@ public class RouterMap {
      * topic / broker circle
      */
     private final static ConcurrentHashMap<String,RouterCircle> routerMap = new ConcurrentHashMap<String, RouterCircle>();
+    //preserve the broker which server the client
+    private final static ConcurrentHashMap<String,String> clientMap = new ConcurrentHashMap<String, String>();
     private final static ConcurrentHashMap<String,String> authMap = new ConcurrentHashMap<String, String>();
 
 

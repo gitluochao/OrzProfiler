@@ -40,14 +40,8 @@ public class PathChildrenGetter extends ProtocolSupport {
             }
         }
     }
-    public List<String> getChildren(){
-        try{
+    public List<String> getChildren() throws KeeperException, InterruptedException {
         return this.retryOperation(new PathChildrenGetterOperation());
-        }catch (KeeperException e){
 
-        }catch (InterruptedException e){
-
-        }
-        return null;
     }
 }

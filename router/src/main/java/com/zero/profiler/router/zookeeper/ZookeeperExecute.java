@@ -106,7 +106,7 @@ public class ZookeeperExecute extends  ZookeeperRecyclableService implements Zoo
     }
 
     @Override
-    public List<String> getChildren(String path) throws ZKCliException {
+    public List<String> getChildren(String path) throws KeeperException, InterruptedException {
         return new PathChildrenGetter(zkl.getZk(),path).getChildren();
     }
 
