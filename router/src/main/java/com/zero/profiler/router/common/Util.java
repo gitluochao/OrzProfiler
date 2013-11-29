@@ -104,10 +104,16 @@ public class Util {
         }catch (UnknownHostException e){
 
         }
+
         return hostAddr;
 
     }
-
+    public static String toJsonString(Object o){
+        return JSON.toJSONString(o);
+    }
+    public static Object parseObject(String jsonStr,Class<?> cls){
+        return JSON.parseObject(jsonStr,cls);
+    }
 
 
 }

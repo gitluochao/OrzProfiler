@@ -74,7 +74,8 @@ public class RouterContext implements Context,Visitor{
     private void synTopic(boolean exitFlag){
         try{
             if(syning.compareAndSet(false,true)){
-
+               ZookeeperExecute zkClient = zkFactory.getZookeeperClient();
+               //
             }
         }catch (Exception e){
 

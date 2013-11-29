@@ -7,11 +7,9 @@ import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.ZooKeeper;
 import org.apache.zookeeper.data.Stat;
-import org.apache.zookeeper.recipes.PathDataGetter;
-import org.apache.zookeeper.recipes.PathDataSetter;
-import org.apache.zookeeper.recipes.PathExistCheck;
-import org.apache.zookeeper.recipes.PathVistor;
+import org.apache.zookeeper.recipes.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
@@ -109,24 +107,36 @@ public class ZookeeperExecute extends  ZookeeperRecyclableService implements Zoo
 
     @Override
     public List<String> getChildren(String path) throws ZKCliException {
-        return null;
+        return new PathChildrenGetter(zkl.getZk(),path).getChildren();
     }
 
     @Override
     public List<String> getChildren(String path, AsyncCallback.ChildrenCallback cb, Object ctz) throws ZKCliException {
-        return null;
+        CountDownLatch sign = new CountDownLatch(1);
+        GetChildrenCallback  childrenCallback = new GetChildrenCallback();
+        zkl.getZk().getChildren(path,false,childrenCallback,sign);
+        return childrenCallback.getResult();
     }
 
     @Override
     public void delete(String path) throws ZKCliException {
+        new  PathDeleter(zkl.getZk(),path);
     }
 
     @Override
     public void delete(String path, boolean cascade, AsyncCallback.VoidCallback cb, Object ctx) throws ZKCliException {
+        CountDownLatch sign = new CountDownLatch(1);
+        SetVoidCallback voidCallback = new SetVoidCallback();
+        zkl.getZk().delete(path,-1,voidCallback,sign);
     }
 
     @Override
     public void close() throws ZKCliException {
+        try{
+            zkl.getZk().close();
+        }catch (InterruptedException e){
+            log.error("close zk connection exception cause by:",e);
+        }
     }
 
 
@@ -161,6 +171,37 @@ public class ZookeeperExecute extends  ZookeeperRecyclableService implements Zoo
                 reconnect();
             }
             countDownLatch.countDown();
+        }
+    }
+    class GetChildrenCallback implements AsyncCallback.ChildrenCallback{
+        private List<String> result;
+        List<String> getResult() {
+            return result;
+        }
+
+        @Override
+        public void processResult(int rc, String path, Object ctx, List<String> children) {
+            KeeperException.Code code = KeeperException.Code.get(rc);
+            CountDownLatch countDownLatch = (CountDownLatch)ctx;
+            if(code.equals(KeeperException.Code.OK)){
+                if(children != null && children.size()>0){
+                    result = new ArrayList<String>(children);
+                }
+            }
+            if(code.equals(KeeperException.Code.SESSIONEXPIRED)){
+                reconnect();
+            }
+            countDownLatch.countDown();
+        }
+    }
+    class SetVoidCallback implements AsyncCallback.VoidCallback{
+        @Override
+        public void processResult(int rc, String path, Object ctx) {
+            CountDownLatch countDownLatch = (CountDownLatch)ctx;
+            KeeperException.Code  code = KeeperException.Code.get(rc);
+            if(code.equals(KeeperException.Code.SESSIONEXPIRED)){
+                reconnect();
+            }
         }
     }
 }
