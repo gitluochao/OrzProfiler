@@ -22,6 +22,7 @@ public class RouterContext implements Context,Visitor{
     private ZookeeperPoolFactory zkFactory = ZookeeperPoolFactory.getInstance();
     private AtomicBoolean syning = new AtomicBoolean(false);
     private RouterMap routerMap = RouterMap.getInstance();
+    private Map<String,String> authMap = new HashMap<String, String>();
     private String engineType;
     public RouterContext() {
         init();
@@ -61,21 +62,24 @@ public class RouterContext implements Context,Visitor{
             syning.set(false);
         }
         synTopic(exitFlag);
-        synRouter(exitFlag);
         synAuthInfo(exitFlag);
 
     }
 
     @Override
     public void clean() {
-
+        if(authMap.size() > 0){
+            authMap.clear();
+        }
+        if(routerMap != null){
+            routerMap.cleanAll();
+        }
     }
     private void synTopic(boolean exitFlag){
         try{
             if(syning.compareAndSet(false,true)){
                ZookeeperExecute zkClient = zkFactory.getZookeeperClient();
                List<String> topics = zkClient.getChildren(ParamKey.ZNode.topic);
-
                if(topics != null && topics.size()>0){
                     Set<String> newBrokers = new HashSet<String>();
                     for(String topic:topics){
@@ -93,15 +97,17 @@ public class RouterContext implements Context,Visitor{
                              for(String broker : brokerGroups){
                                   String brokerStr = zkClient.getData(ParamKey.ZNode.broker+"/"+groupName+"/"+broker);
                                   BrokerUrl brokerUrl = (BrokerUrl)Util.parseObject(brokerStr,BrokerUrl.class);
+                                  brokerUrl.setId(broker);
                                   serviceUrls.add(brokerUrl);
                                   newBrokers.add(broker);
                              }
-
+                        }
+                        if(serviceUrls.size() > 0){
+                            routerMap.update(topic,serviceUrls);
                         }
                     }
+                    routerMap.changeClientInfo(newBrokers);
                }
-
-
             }
         }catch (Exception e){
             log.error(e.toString());
@@ -112,23 +118,23 @@ public class RouterContext implements Context,Visitor{
         }
 
     }
-    private void synRouter(boolean exitFlag){
-        try{
-            if(syning.compareAndSet(false,true)){
-                 ZookeeperExecute zkClient = zkFactory.getZookeeperClient();
 
-            }
-        }catch (Exception e){
-
-        }finally {
-            syning.set(false);
-        }
-
-    }
     private void synAuthInfo(boolean exitFlag){
         try{
             if(syning.compareAndSet(false,true)){
-
+                ZookeeperExecute zkClient = zkFactory.getZookeeperClient();
+                List<String> users = zkClient.getChildren(ParamKey.ZNode.user);
+                authMap.clear();
+                if(users != null && users.size() > 0){
+                    for(String user : users ){
+                        String userStr = zkClient.getData(ParamKey.ZNode.user+"/"+user);
+                        if(Util.isNotBlank(userStr)){
+                            UserInfo userInfo = (UserInfo)Util.parseObject(userStr,UserInfo.class);
+                            userInfo.setUsername(user);
+                            authMap.put(userStr,userInfo.getPassword());
+                        }
+                    }
+                }
             }
         }catch (Exception e){
 
@@ -138,21 +144,34 @@ public class RouterContext implements Context,Visitor{
     }
     @Override
     public void onNodeChildrenChanged(String path, List<String> children) {
-
+         log.info("some change accour on path"+path);
+         synTopic(false);
     }
 
     @Override
     public void onNodeCreated(String path) {
-
+        if(ParamKey.ZNode.user.equals(path)){
+            synAuthInfo(false);
+        }else {
+            synTopic(false);
+        }
     }
 
     @Override
     public void onNodeDataChanged(String path) {
-
+        if(ParamKey.ZNode.user.equals(path)){
+            synAuthInfo(false);
+        }else {
+            synTopic(false);
+        }
     }
 
     @Override
     public void onNodeDeleted(String path) {
-
+        if(ParamKey.ZNode.user.equals(path)){
+            synAuthInfo(false);
+        }else {
+            synTopic(false);
+        }
     }
 }

@@ -5,7 +5,7 @@ package com.zero.profiler.router.common;
  * Date: 13-11-28
  * Time: 下午5:08
  */
-public class BrokerUrl {
+public class BrokerUrl  implements  Comparable<BrokerUrl>{
     private String id;
    	private String host;
    	private String external;
@@ -47,5 +47,34 @@ public class BrokerUrl {
     }
     public String getinternalUrl(){
         return host+":"+this.internal;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj != null && obj instanceof BrokerUrl){
+            return this.id == ((BrokerUrl) obj).id && this.host == ((BrokerUrl) obj).host && this.internal == ((BrokerUrl) obj).internal
+                    && this.external == ((BrokerUrl) obj).external;
+        }
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return "BrokerUrl{" +
+                "id='" + id + '\'' +
+                ", host='" + host + '\'' +
+                ", external='" + external + '\'' +
+                ", internal='" + internal + '\'' +
+                '}';
+    }
+
+    @Override
+    public int hashCode() {
+        return this.toString().hashCode();
+    }
+
+    @Override
+    public int compareTo(BrokerUrl o) {
+       return  this.id.compareTo(o.id);
     }
 }

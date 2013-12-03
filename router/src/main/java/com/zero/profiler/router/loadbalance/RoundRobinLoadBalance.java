@@ -9,8 +9,14 @@ import com.zero.profiler.router.exception.LoadBalanceException;
  * Time: 下午3:45
  */
 public class RoundRobinLoadBalance implements LoadBalanceStrategy {
+    RouterMap routerMap = RouterMap.getInstance();
     @Override
     public String choose(String topic, String cliendId) throws LoadBalanceException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        String broker = routerMap.getExistClientBroker(cliendId);
+        if(broker == null){
+            broker = routerMap.getFollower(topic);
+            routerMap.setExistClientBroker(cliendId,broker);
+        }
+        return broker;
     }
 }

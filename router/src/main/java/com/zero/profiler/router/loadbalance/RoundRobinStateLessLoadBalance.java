@@ -8,8 +8,9 @@ import com.zero.profiler.router.exception.LoadBalanceException;
  * Time: 下午3:57
  */
 public class RoundRobinStateLessLoadBalance implements LoadBalanceStrategy {
+    RouterMap routerMap = RouterMap.getInstance();
     @Override
     public String choose(String topic, String cliendId) throws LoadBalanceException {
-        return null;
+        return routerMap.getFollower(topic);
     }
 }
