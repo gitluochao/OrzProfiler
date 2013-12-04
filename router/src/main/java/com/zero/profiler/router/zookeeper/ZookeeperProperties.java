@@ -22,11 +22,11 @@ public class ZookeeperProperties {
     public ZookeeperProperties(Properties prop) {
         if(prop != null){
             try{
-                    this.serverList = Util.getStrParam("serverList",prop.getProperty(ParamKey.ZKService.hosts),Util.getHostName(),true);
-                    this.zkTimeOut = Util.getIntParam("zkTimeOut",prop.getProperty(ParamKey.ZKService.timeOut),3000,3000,500000,true);
-                    this.zkPoolSize = Util.getIntParam("zkPoolSize",prop.getProperty(ParamKey.ZKService.poolSize),1,1,500);
-                    this.zkRetryCount = Util.getIntParam("zkRetryCount",prop.getProperty(ParamKey.ZKClient.zkRetryCout),1,1,20);
-                    this.zkRetryInterval = Util.getIntParam("zkRetryInterval",prop.getProperty(ParamKey.ZKClient.zkRetryInterval),1000,10,1000);
+                    this.serverList = Util.getStrParam(ParamKey.ZKService.hosts,prop.getProperty(ParamKey.ZKService.hosts),Util.getHostName(),true);
+                    this.zkTimeOut = Util.getIntParam(ParamKey.ZKService.timeOut,prop.getProperty(ParamKey.ZKService.timeOut),3000,3000,500000,true);
+                    this.zkPoolSize = Util.getIntParam(ParamKey.ZKService.poolSize,prop.getProperty(ParamKey.ZKService.poolSize),1,1,500);
+                    this.zkRetryCount = Util.getIntParam(ParamKey.ZKClient.zkRetryCout,prop.getProperty(ParamKey.ZKClient.zkRetryCout),1,1,20);
+                    this.zkRetryInterval = Util.getIntParam(ParamKey.ZKClient.zkRetryInterval,prop.getProperty(ParamKey.ZKClient.zkRetryInterval),1000,10,1000);
                }catch (Exception e){
                     log.error("parse param error...");
                     System.exit(-1);

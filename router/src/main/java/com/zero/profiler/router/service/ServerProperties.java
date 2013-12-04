@@ -46,6 +46,8 @@ public class ServerProperties {
      */
     private int cliTimeout = 5000;
 
+    private long maxReadBufferBytes = Long.MAX_VALUE;
+
     public ServerProperties(Properties prop) throws ValidationException{
         bindadr = prop.getProperty(ParamKey.Server.bindAdr);
         if(bindadr == null||bindadr.isEmpty()){
@@ -58,9 +60,10 @@ public class ServerProperties {
         if(minWorkThreads > maxWorkThreads){
            throw  new ValidationException(String.format("minWorkThreads:[%d] is greater than maxWorkThreads:[%d]",minWorkThreads,maxWorkThreads));
         }
-        stopTimeoutUnit = TimeUnit.valueOf(prop.getProperty(ParamKey.Server.stopTimeoutUnit,"SECONDS"));
+        stopTimeoutUnit = TimeUnit.valueOf(prop.getProperty(ParamKey.Server.stopTimeoutUnit, "SECONDS"));
         stopTimeoutVal = Util.getIntParam(ParamKey.Server.stopTimeoutVal,prop.getProperty(ParamKey.Server.stopTimeoutVal),60,0,10000);
         cliTimeout = Util.getIntParam(ParamKey.Server.cliTimeout,prop.getProperty(ParamKey.Server.cliTimeout),5000,0,500000);
+        maxReadBufferBytes = Util.getLongParam(ParamKey.Server.maxReadBuffer,prop.getProperty(ParamKey.Server.maxReadBuffer));
     }
 
     public String getId() {
@@ -99,4 +102,7 @@ public class ServerProperties {
         return cliTimeout;
     }
 
+    public long getMaxReadBufferBytes() {
+        return maxReadBufferBytes;
+    }
 }

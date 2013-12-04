@@ -43,4 +43,19 @@ public class Session {
     public void setReceiveWindowSize(String receiveWindowSize) {
         this.receiveWindowSize = receiveWindowSize;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);    //To change body of overridden methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public String toString() {
+        return "Session{" +
+                "type='" + type + '\'' +
+                ", timeout='" + timeout + '\'' +
+                ", subscriber='" + subscriber + '\'' +
+                ", receiveWindowSize='" + receiveWindowSize + '\'' +
+                '}';
+    }
 }

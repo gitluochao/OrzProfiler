@@ -63,7 +63,6 @@ public class ZookeerRecyclableClient {
         watchPath.put(watchThread,path);
         visitors.put(watchThread,visitor);
         watchThread.start();
-
     }
     public void watchPathChild(final String path,final  Visitor visitor){
         Thread watchThread = new Thread(){

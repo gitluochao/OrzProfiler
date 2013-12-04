@@ -27,7 +27,7 @@ public class ZookeeperPoolFactory {
         try {
             Properties prop = Util.getConf();
             ZookeeperProperties zkProp = new ZookeeperProperties(prop);
-            int poolSize =zkProp.getZkPoolSize();
+            poolSize =zkProp.getZkPoolSize();
             pool = new ArrayList<ZookeeperExecute>(poolSize);
             for(int i=0;i<poolSize;i++){
                 ZookeeperExecute zookeeperOperation = new ZookeeperExecute(zkProp);

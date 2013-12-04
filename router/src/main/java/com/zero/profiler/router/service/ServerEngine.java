@@ -1,10 +1,13 @@
 package com.zero.profiler.router.service;
 
+import com.zero.profiler.router.common.ParamKey;
 import com.zero.profiler.router.common.Util;
 import com.zero.profiler.router.exception.ServiceException;
 import com.zero.profiler.router.exception.ValidationException;
 import com.zero.profiler.router.loadbalance.RouterContext;
+import org.apache.log4j.Logger;
 
+import java.util.Properties;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
@@ -101,4 +104,38 @@ public abstract class ServerEngine implements Server{
     public abstract void doStart() throws ServiceException;
     public abstract void doStop() throws ServiceException;
     public abstract void doServer() throws ServiceException;
+
+    public static void main(String args[]){
+        final Logger log = Logger.getLogger(ServerEngine.class);
+        Thread.currentThread().setName("main server thread");
+        try{
+           Properties prop =  Util.getConf();
+           String name = prop.getProperty(ParamKey.Server.serverType,"TREADPOOL");
+           String className = ParamKey.Server.ServerClass.valueOf(name).getClassName();
+           final  ServerEngine  engine = ServerEngineFactory.getInstance(className);
+           //
+           Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+               @Override
+               public void run() {
+                   try{
+                        log.info("engine stop....");
+                        engine.doStop();
+                   }catch (Exception e){
+                       log.error(e);
+                       System.exit(-1);
+                   }
+               }
+           }));
+           try{
+               engine.start();
+           }catch (Exception e){
+               log.error(e);
+               System.exit(-1);
+           }
+
+        }catch (Exception e){
+            log.error(e);
+            System.exit(-1);
+        }
+    }
 }

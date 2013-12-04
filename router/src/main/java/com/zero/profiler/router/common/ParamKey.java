@@ -51,5 +51,6 @@ public abstract class ParamKey {
         public static final String stopTimeoutUnit  = "TIME_UNIT";
         public static final String stopTimeoutVal = "STOP_TIMEOUT_VAL";
         public static final String cliTimeout = "CLI_TIMEOUT";
+        public static final String maxReadBuffer= "MAX_READ_BUFFER";
     }
 }

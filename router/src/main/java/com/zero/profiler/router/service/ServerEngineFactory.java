@@ -15,7 +15,7 @@ public class ServerEngineFactory {
     private static final Map<String,ServerEngine> engines = new ConcurrentHashMap<String,ServerEngine>();
     public static  ServerEngine getInstance(String engineName) throws  ServiceException{
         ServerEngine engine = null;
-         if(engines.get(engineName)!=null){
+         if(engines.get(engineName) != null){
              engine = engines.get(engineName);
          }else{
              try {

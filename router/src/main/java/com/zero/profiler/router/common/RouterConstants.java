@@ -11,7 +11,13 @@ import java.util.Properties;
  */
 public class RouterConstants {
     public static final String ROUTER_PATH = "router.properties";
-    public static final String DEFAULT_SEVER_TYPE = "BLOCK";
+    public static final String DEFAULT_SEVER_TYPE = "TREADPOOL";
+    public static final String ID_SPILT = "_";
+    public static final String LB_ROUND_ROBIN = "lb_round_robin";
+    public static final String LB_RANDOM = "lb_random";
+    public static final String LB_ROUND_ROBIN_STATELESS = "lb_round_robin_stateless";
+    public static final String TIME_OUT = "time_out";
+    public static final String RECEIVE_WINDOW_SIZE = "receive_window_size";
 
 
     public static void main(String[] args) throws ServiceException{

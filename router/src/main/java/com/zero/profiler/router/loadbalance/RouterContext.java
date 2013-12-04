@@ -1,6 +1,8 @@
 package com.zero.profiler.router.loadbalance;
 
+import com.zero.profiler.router.Constants;
 import com.zero.profiler.router.common.*;
+import com.zero.profiler.router.exception.ServiceException;
 import com.zero.profiler.router.service.ServerEngine;
 import com.zero.profiler.router.service.ServerEngineFactory;
 import com.zero.profiler.router.zookeeper.Visitor;
@@ -39,7 +41,7 @@ public class RouterContext implements Context,Visitor{
        try{
            appParam = Util.getConf();
            engineType = Util.getStrParam(ParamKey.Server.serverType,appParam.getProperty(ParamKey.Server.serverType), RouterConstants.DEFAULT_SEVER_TYPE,true);
-
+           syn();
        }catch (Exception e){
 
        }
@@ -57,7 +59,7 @@ public class RouterContext implements Context,Visitor{
                 exitFlag = !engine.isStarted();
             }
         }catch (Exception e){
-
+            log.error("get engineClass error",e);
         }finally {
             syning.set(false);
         }
@@ -118,7 +120,10 @@ public class RouterContext implements Context,Visitor{
         }
 
     }
-
+    public LoadBalanceStrategy getPolicy(String policyType){
+        LoadBalanceFactory factory = LoadBalanceFactory.getInstance();
+        return factory.getLoadPolicy(policyType);
+    }
     private void synAuthInfo(boolean exitFlag){
         try{
             if(syning.compareAndSet(false,true)){
@@ -174,4 +179,50 @@ public class RouterContext implements Context,Visitor{
             synTopic(false);
         }
     }
+    //authenticate client  return session id
+    public String authenticate(String user,String password,String topic,Map<String,String> prop) throws ServiceException{
+        String clientId = prop.get(Constants.LOCAL_HOST)+RouterConstants.ID_SPILT+topic;
+        String sessionId = null;
+        String pwd = authMap.get(user);
+        if((pwd == null && user == null) || (pwd != null && pwd.equals(password))){
+            sessionId = generatorSessionId(user,clientId,topic,prop);
+        }
+        return  sessionId;
+    }
+    private String generatorSessionId(String user,String clientId,String topic,Map<String,String> prop) throws ServiceException{
+        String sessionId = null;
+        //check session is alread exist?
+        Session session = new Session();
+        session.setType(prop.get(Constants.TYPE));
+        session.setTimeout(prop.get(RouterConstants.TIME_OUT));
+        if("SUB".equalsIgnoreCase(prop.get(Constants.TYPE))){
+            session.setReceiveWindowSize(prop.get(RouterConstants.RECEIVE_WINDOW_SIZE));
+            session.setSubscriber(user+RouterConstants.ID_SPILT+topic);
+        }
+        try{
+           ZookeeperExecute zkClient = zkFactory.getZookeeperClient();
+        //client session /  optimize user cache / store the sessionInfo
+           List<String> sessions = zkClient.getChildren(ParamKey.ZNode.session+"/"+clientId);
+           if(sessions != null && sessions.size() > 0){
+               for(String sessionToken : sessions){
+                   String sessionStr = zkClient.getData(ParamKey.ZNode.session+"/"+clientId+"/"+sessionToken);
+                   Session clientSession = (Session)Util.parseObject(sessionStr,Session.class);
+                   if(clientSession.equals(session)){
+                       sessionId = sessionToken;
+                       return sessionId;
+                   }
+               }
+           }
+           //run to here applies that we need create a new session / register in zookeeper
+           sessionId = Util.getMD5(System.nanoTime()+clientId);
+           zkClient.setData(ParamKey.ZNode.session+"/"+clientId+"/"+sessionId,Util.toJsonString(session));
+        }catch (Exception e){
+            throw new ServiceException("Authentication failure: Zookeeper service is unavailable..please retry a few minutes late");
+        }
+        return sessionId;
+    }
+    public List<String> getTopicBrokers(String topic){
+        return routerMap.getBrokers(topic);
+    }
+
 }

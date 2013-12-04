@@ -41,8 +41,30 @@ public class Util {
     public static int getIntParam(String paramName,String param){
         return getIntParam(paramName,param,0,0,Integer.MAX_VALUE,false);
     }
+
     public static int getIntParam(String paramName,String param,int defaultParam,int start,int end){
         return getIntParam(paramName,param,defaultParam,start,end,false);
+    }
+    public static long getLongParam(String paramName,String param){
+        return getLongParam(paramName,param,Long.MAX_VALUE,0,Long.MAX_VALUE,false);
+    }
+    public static long getLongParam(String paramName,String param,long defaultParam,long start,long end){
+        return  getLongParam(paramName,param,defaultParam,start,end,false);
+    }
+    public static long getLongParam(String paramName,String param,long defaultParam,long start,long end,boolean nullcheck){
+        if (param != null) {
+            long paramInt = Long.parseLong(param);
+            if (paramInt < start || paramInt > end) {
+                throw new RuntimeException(String.format("the param is not at the range [%s - %s]", start, end));
+            } else {
+                return paramInt;
+            }
+        } else {
+            if (nullcheck) {
+                throw new RuntimeException(String.format("the param is required [%s]", paramName));
+            }
+            return defaultParam;
+        }
     }
     public static int getIntParam(String paramName,String param,int defaultParam,int start,int end,boolean nullcheck){
         if(param != null){
