@@ -357,7 +357,7 @@
     <file path="$PROJECT_DIR$/../card-activity-appliances/jd-card-dao/src/main/java/com/jd/card/dao/activity/impl/ActivityDaoImpl.java" changelist="9c62d888-ef55-4da7-bc1f-f3c75ce57c62" time="1383295750845" ignored="false" />
     <file path="$PROJECT_DIR$/../card-activity-appliances/jd-card-web/src/main/java/com/jd/card/web/action/api/ApiAction.java" changelist="9c62d888-ef55-4da7-bc1f-f3c75ce57c62" time="1383535458435" ignored="false" />
     <file path="$PROJECT_DIR$/../card-activity-appliances/jd-card-domain/src/main/java/com/jd/card/domain/activity/ActCodeCached.java" changelist="9c62d888-ef55-4da7-bc1f-f3c75ce57c62" time="1383295750845" ignored="false" />
-    <file path="/Dummy.txt" changelist="9c62d888-ef55-4da7-bc1f-f3c75ce57c62" time="1387275688758" ignored="false" />
+    <file path="/Dummy.txt" changelist="9c62d888-ef55-4da7-bc1f-f3c75ce57c62" time="1387446576093" ignored="false" />
     <file path="$PROJECT_DIR$/../card-activity-appliances/jd-card-domain/pom.xml" changelist="9c62d888-ef55-4da7-bc1f-f3c75ce57c62" time="1383535458437" ignored="false" />
     <file path="$PROJECT_DIR$/../card-activity-appliances/jd-card-manager/pom.xml" changelist="9c62d888-ef55-4da7-bc1f-f3c75ce57c62" time="1383535458435" ignored="false" />
     <file path="$PROJECT_DIR$/../card-activity-appliances/jd-card-service/pom.xml" changelist="9c62d888-ef55-4da7-bc1f-f3c75ce57c62" time="1383535458435" ignored="false" />
@@ -1255,7 +1255,7 @@
       <file leaf-file-name="Disposeable.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/broker/src/main/java/com/zero/orzprofiler/zookeeper/Disposeable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="1" selection-start="228" selection-end="229" vertical-scroll-proportion="0.28350514">
+            <state line="10" column="1" selection-start="228" selection-end="229" vertical-scroll-proportion="0.3343465">
               <folding />
             </state>
           </provider>
@@ -1371,8 +1371,9 @@
     <option name="jreName" value="#JAVA_INTERNAL" />
   </component>
   <component name="ProjectFrameBounds">
+    <option name="y" value="22" />
     <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="height" value="804" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1694,40 +1695,6 @@
               <option name="myItemId" value="orzprofiler" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zookeeper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OrzProfiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OrzProfiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="broker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="orzprofiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1759,7 +1726,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="message" />
+              <option name="myItemId" value="profiler" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1779,12 +1746,12 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -2088,8 +2055,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1440" height="804" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295838" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -2108,7 +2075,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13055556" sideWeight="0.67254037" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22569445" sideWeight="0.67254037" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22569445" sideWeight="0.67254037" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3274596" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299356" sideWeight="0.7322835" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14914162" sideWeight="0.42744657" order="9" side_tool="true" content_ui="tabs" />
@@ -2276,6 +2243,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/broker/src/main/java/com/zero/orzprofiler/zookeeper/Disposeable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="1" selection-start="228" selection-end="229" vertical-scroll-proportion="0.3343465">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/broker/src/main/java/com/zero/orzprofiler/message/AppendMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="31" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
@@ -2286,13 +2260,6 @@
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/io/Serializable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="17" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/broker/src/main/java/com/zero/orzprofiler/zookeeper/Disposeable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="1" selection-start="228" selection-end="229" vertical-scroll-proportion="0.28350514">
           <folding />
         </state>
       </provider>
