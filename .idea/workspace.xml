@@ -357,7 +357,7 @@
     <file path="$PROJECT_DIR$/../card-activity-appliances/jd-card-dao/src/main/java/com/jd/card/dao/activity/impl/ActivityDaoImpl.java" changelist="9c62d888-ef55-4da7-bc1f-f3c75ce57c62" time="1383295750845" ignored="false" />
     <file path="$PROJECT_DIR$/../card-activity-appliances/jd-card-web/src/main/java/com/jd/card/web/action/api/ApiAction.java" changelist="9c62d888-ef55-4da7-bc1f-f3c75ce57c62" time="1383535458435" ignored="false" />
     <file path="$PROJECT_DIR$/../card-activity-appliances/jd-card-domain/src/main/java/com/jd/card/domain/activity/ActCodeCached.java" changelist="9c62d888-ef55-4da7-bc1f-f3c75ce57c62" time="1383295750845" ignored="false" />
-    <file path="/Dummy.txt" changelist="9c62d888-ef55-4da7-bc1f-f3c75ce57c62" time="1387446576093" ignored="false" />
+    <file path="/Dummy.txt" changelist="9c62d888-ef55-4da7-bc1f-f3c75ce57c62" time="1387447393130" ignored="false" />
     <file path="$PROJECT_DIR$/../card-activity-appliances/jd-card-domain/pom.xml" changelist="9c62d888-ef55-4da7-bc1f-f3c75ce57c62" time="1383535458437" ignored="false" />
     <file path="$PROJECT_DIR$/../card-activity-appliances/jd-card-manager/pom.xml" changelist="9c62d888-ef55-4da7-bc1f-f3c75ce57c62" time="1383535458435" ignored="false" />
     <file path="$PROJECT_DIR$/../card-activity-appliances/jd-card-service/pom.xml" changelist="9c62d888-ef55-4da7-bc1f-f3c75ce57c62" time="1383535458435" ignored="false" />
@@ -1142,7 +1142,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -1180,6 +1179,7 @@
       </breakpoint>
     </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -1255,7 +1255,7 @@
       <file leaf-file-name="Disposeable.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/broker/src/main/java/com/zero/orzprofiler/zookeeper/Disposeable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="1" selection-start="228" selection-end="229" vertical-scroll-proportion="0.3343465">
+            <state line="10" column="1" selection-start="228" selection-end="228" vertical-scroll-proportion="0.33898306">
               <folding />
             </state>
           </provider>
@@ -1373,7 +1373,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1440" />
-    <option name="height" value="804" />
+    <option name="height" value="795" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1749,9 +1749,9 @@
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -2055,7 +2055,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="804" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="795" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295838" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2243,13 +2243,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/broker/src/main/java/com/zero/orzprofiler/zookeeper/Disposeable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="1" selection-start="228" selection-end="229" vertical-scroll-proportion="0.3343465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/broker/src/main/java/com/zero/orzprofiler/message/AppendMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="31" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
@@ -2260,6 +2253,13 @@
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/io/Serializable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="17" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/broker/src/main/java/com/zero/orzprofiler/zookeeper/Disposeable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="1" selection-start="228" selection-end="228" vertical-scroll-proportion="0.33898306">
           <folding />
         </state>
       </provider>
