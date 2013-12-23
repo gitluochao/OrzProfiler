@@ -37,6 +37,19 @@ public class FileChunk implements Chunk {
     }
 
     @Override
+    public Point<ByteBuffer> freeze(ByteBuffer byteBuffer) {
+        if (!hasRemainFor(byteBuffer)) {
+            throw new IllegalArgumentException(this + "has not remain space the buffer");
+        }
+        //文件写入位置
+        final long postion = size.getAndAdd(DATA_SIZE_LENGTH + byteBuffer.remaining());
+        if (!buffer.hasRemainFor(byteBuffer)) {
+            buffer.freeze();
+            buffer = new BufferImpl(segment(postion), maxMessageSize);
+        }
+        return buffer.write(byteBuffer);
+    }
+    @Override
     public void close() {
         try{
             buffer.freeze();
@@ -50,21 +63,46 @@ public class FileChunk implements Chunk {
     public boolean hasRemainFor(ByteBuffer byteBuffer) {
         return size.get()+DATA_SIZE_LENGTH+byteBuffer.remaining() <= capacity;
     }
-
-    @Override
-    public Point<ByteBuffer> freeze(ByteBuffer byteBuffer) {
-        if(!hasRemainFor(byteBuffer)){
-           throw new IllegalArgumentException(this+"has not remain space the buffer");
-        }
-        //文件写入位置
-        final long postion = size.getAndAdd(DATA_SIZE_LENGTH+byteBuffer.remaining());
-        if(!buffer.hasRemainFor(byteBuffer)){
-            buffer.freeze();
-
-        }
-        return buffer.write(byteBuffer);
+    public long getSize(){
+        return size.get();
     }
 
+    private Segment segment(final long position){
+        return new Segment() {
+            @Override
+            public void read(byte[] buffer) throws IOException {
+                FileChannel fileChannel1 = new RandomAccessFile(filePath,"rwd").getChannel();
+                try{
+                    fileChannel1.read(ByteBuffer.wrap(buffer),position);
+                }catch (Exception e){
+                    throw new IOException(e);
+                }finally {
+                    fileChannel1.close();
+                }
+            }
+
+            @Override
+            public void reduce(final int length) {
+                final int del = -(length + DATA_SIZE_LENGTH);
+                String fileName = filePath.getName();
+                if(size.addAndGet(del) == 0 && fileChannel.isOpen()){
+                    if(filePath.delete())
+                        logger.info(String.format("%s deleted",fileName));
+                    else
+                        logger.info(String.format("%s delete failed",fileName));
+
+                }
+            }
+
+            @Override
+            public void write(ByteBuffer[] byteBuffers, long size) throws IOException {
+                int write = 0;
+                while (write < size){
+                    write += fileChannel.write(byteBuffers);
+                }
+            }
+        };
+    }
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
@@ -107,7 +145,7 @@ public class FileChunk implements Chunk {
 
         @Override
         public Point<ByteBuffer> write(ByteBuffer byteBuffer) {
-            return null;  //To change body of implemented methods use File | Settings | File Templates.
+            return null;
         }
     }
 }

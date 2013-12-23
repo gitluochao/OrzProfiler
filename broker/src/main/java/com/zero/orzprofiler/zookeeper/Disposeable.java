@@ -8,4 +8,5 @@ package com.zero.orzprofiler.zookeeper;
  * To change this template use File | Settings | File Templates.
  */
 public interface Disposeable {
+    void dispose();
 }

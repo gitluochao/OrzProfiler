@@ -19,7 +19,6 @@ public class ServerEngineFactory {
          }else{
              try {
                  engine =(ServerEngine) Class.forName(engineName).newInstance();
-
                  engines.put(engineName,engine);
              }catch (ClassNotFoundException e){
                  throw  new ServiceException("get engine  error cause by  class not found",e.getCause());
