@@ -28,9 +28,9 @@ public interface Buffer {
     Point<ByteBuffer> write(ByteBuffer byteBuffer);
 
     /**
-     * {@link slice}
+     * {@link Slice}
      */
-    interface slice{
+    interface Slice{
         /**
          * return {@Buffer} range  position to limit
          * @return

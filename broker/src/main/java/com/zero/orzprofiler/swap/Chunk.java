@@ -37,6 +37,7 @@ public interface Chunk {
 
         void write(ByteBuffer[] byteBuffers,long size) throws IOException;
 
+        void reduce(final int length);
         /**
          * record the length of the segment
          */

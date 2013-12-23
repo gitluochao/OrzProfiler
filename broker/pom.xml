@@ -10,6 +10,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>broker</artifactId>
-
+   <profiles>
+       <profile>
+           <id>develop</id>
+           <properties>
+               <orzProfiler.log.file>D:\export\home\tomcat\logs\orzProfiler\file2.txt\broker.log</orzProfiler.log.file>
+           </properties>
+       </profile>
+   </profiles>
 
 </project>
