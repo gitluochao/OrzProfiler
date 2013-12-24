@@ -116,22 +116,6 @@ public class FileChunk implements Chunk {
                 .append(fileChannel.isOpen());
         return builder.toString();
     }
-    private Segment segment(){
-        return new Segment() {
-            @Override
-            public void read(byte[] buffer) throws IOException {
-                //To change body of implemented methods use File | Settings | File Templates.
-            }
-
-            @Override
-            public void write(ByteBuffer[] byteBuffers, long size) throws IOException {
-                long write = 0;
-                while (write < size){
-                   write += fileChannel.write(byteBuffers);
-                }
-            }
-        };
-    }
 
     private class NullBuffer implements Buffer{
         @Override
