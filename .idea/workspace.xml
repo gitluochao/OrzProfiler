@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90b4b31e-eb77-4953-bb49-f7ffc8f6a486" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="90b4b31e-eb77-4953-bb49-f7ffc8f6a486" name="Default" comment="" />
     <ignored path="OrzProfiler.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="90b4b31e-eb77-4953-bb49-f7ffc8f6a486" time="1387808951061" ignored="false" />
@@ -90,6 +87,15 @@
         <entry file="file://$PROJECT_DIR$/broker/src/main/java/com/zero/orzprofiler/swap/Chunk.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="10" column="17" selection-start="169" selection-end="169" vertical-scroll-proportion="0.24780977">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Buffer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/broker/src/main/java/com/zero/orzprofiler/swap/Buffer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="17" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -493,6 +499,13 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/broker/src/main/java/com/zero/orzprofiler/swap/Buffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="17" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/broker/src/main/java/com/zero/orzprofiler/swap/ByteBufferFreezer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="13" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0">
