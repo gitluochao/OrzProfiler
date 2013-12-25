@@ -24,7 +24,7 @@ public class FileChunk implements Chunk {
     private final FileChannel fileChannel;
     private Buffer buffer = new NullBuffer();
 
-    public FileChunk(int maxMessageSize, File filePath, long capacity) {
+    public FileChunk( File filePath,int maxMessageSize, long capacity) {
         this.maxMessageSize = maxMessageSize;
         this.filePath = filePath;
         this.capacity = capacity;
