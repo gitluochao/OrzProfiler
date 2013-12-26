@@ -37,7 +37,11 @@ public class ByteBufferFreezer implements Freezer<ByteBuffer> {
     }
     @Override
     public Point<ByteBuffer> freeze(ByteBuffer message) {
-        return null;
+        if (!chunk.hasRemainFor(message.remaining())){
+            chunk.fix();
+            chunk = newChunk();
+        }
+        return chunk.freeze(message);
     }
     public int seq(){
         return seq == Integer.MAX_VALUE ? (seq = 0) : seq++;
@@ -53,25 +57,31 @@ public class ByteBufferFreezer implements Freezer<ByteBuffer> {
         private int position;
         private final int capacity;
         private final File filePath;
-        private ByteBuffer byteBuffer;
+        private ByteBuffer buffer;
         private Queue<ReplaceBufferPoint> pending = new LinkedBlockingDeque<ReplaceBufferPoint>();
 
         public Chunk(File filePath , int capacity,int bufferSize ) {
             this.capacity = capacity;
             this.filePath = filePath;
-            byteBuffer = ByteBuffer.allocate(bufferSize);
+            buffer = ByteBuffer.allocate(bufferSize);
             log.info("chunk created");
+        }
+        private synchronized void fix(){
+            if (fix)
+                return;
+            fix = true;
+            flush();
         }
         public Point<ByteBuffer> freeze(ByteBuffer byteBuffer){
             if(fix) throw new IllegalStateException("Can not freeze  a fix chunk");
             int length = byteBuffer.remaining();
-            if(!hasRemainFor(length)){
+            if(!bufferRemainingLessThan(length)){
                 flush();
-                byteBuffer.clear();
+                buffer.clear();
             }
-            byteBuffer.putInt(length);
+            buffer.putInt(length);
             ByteBufferPoint byteBufferPoint = new ByteBufferPoint(byteBuffer,byteBuffer.position(),length);
-            byteBuffer.put(byteBuffer);
+            buffer.put(byteBuffer);
             ReplaceBufferPoint replaceBufferPoint = new ReplaceBufferPoint(byteBufferPoint,position,length);
             //wait flush data to disk file
             pending.add(replaceBufferPoint);
@@ -91,7 +101,7 @@ public class ByteBufferFreezer implements Freezer<ByteBuffer> {
             FileOutputStream fout = new FileOutputStream(filePath);
             try {
                 FileChannel fileChannel = fout.getChannel();
-                fileChannel.write(byteBuffer);
+                fileChannel.write(buffer);
                 fileChannel.close();
             }finally {
                 fout.close();
@@ -112,10 +122,10 @@ public class ByteBufferFreezer implements Freezer<ByteBuffer> {
             position += length+DATA_SIZE_LENGTH;
         }
         private boolean hasRemainFor(int  size){
-            return size+DATA_SIZE_LENGTH + position <= byteBuffer.capacity();
+            return size+DATA_SIZE_LENGTH + position <= capacity;
         }
-        private boolean hasRemainFor(ByteBuffer byteBuffer){
-            return byteBuffer.remaining() + DATA_SIZE_LENGTH + position <= byteBuffer.capacity();
+        private boolean bufferRemainingLessThan(final int length){
+            return length + DATA_SIZE_LENGTH + position <= buffer.remaining();
         }
         private final static class Slice{
             private final File  filePath;

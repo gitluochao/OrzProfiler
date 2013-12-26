@@ -17,8 +17,8 @@ public class FileChunkTest {
         String fileName = "D:\\export\\home\\tomcat\\logs\\orzProfiler\\file2.txt";
         File home = new File(fileName);
         int messageSize = 1;
-        long capacity = 32 * 2*2*2;
-        FileChunk fileChunk = new FileChunk(messageSize,home,capacity);
+        int capacity = 32 * 2*2*2;
+        FileChunk fileChunk = new FileChunk(home,messageSize,capacity);
         String log = "tOrderSyncDirectPayRequestOrderSyncDirectPayRequest OrderSyncDirectPayRequest:"+"["+1+"]"+ System.nanoTime();
         Point<ByteBuffer> point1 = fileChunk.freeze(ByteBuffer.wrap(log.getBytes()));
         Point<ByteBuffer> point2 = fileChunk.freeze(ByteBuffer.wrap(log.getBytes()));

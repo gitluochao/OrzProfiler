@@ -10,7 +10,7 @@ import java.util.concurrent.*;
  */
 public abstract class Repository<K,V> implements  IRepository<K,V>{
     private Factory<K,V> factory;
-    private final ConcurrentHashMap<K,FutureTask<V>> map = new ConcurrentHashMap<K,FutureTask<V>>();
+    public final ConcurrentHashMap<K,FutureTask<V>> map = new ConcurrentHashMap<K,FutureTask<V>>();
 
     protected Repository(Factory<K, V> factory) {
         this.factory = factory;
