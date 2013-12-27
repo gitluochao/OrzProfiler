@@ -119,7 +119,7 @@ public class ByteBufferMessageFactory implements MessageFactory<ByteBuffer>{
         }
 
         @Override
-        public void FreezeBy(Freezer<ByteBuffer> freezer) {
+        public void freezeBy(Freezer<ByteBuffer> freezer) {
             lock.writeLock().lock();
             try{
                 if (dispose || content== null)

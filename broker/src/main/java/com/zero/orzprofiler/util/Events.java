@@ -1,9 +1,6 @@
 package com.zero.orzprofiler.util;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 /**
  * User: luochao
@@ -26,8 +23,24 @@ public final class Events {
         //jvm close this  run thread
         thread.setUncaughtExceptionHandler(LogUncaughtExceptionHandler.getInstance());
         Runtime.getRuntime().addShutdownHook(thread);
+
+
     }
-    private static void dispose(){
+    public static void enqueue(final Runnable runnable){
+      EXECUTOR.execute(runnable);
+    }
+    public static ScheduledFuture<?> scheduledAtFixRate(Runnable runnable,final long period,final TimeUnit timeUnit){
+        return SCHEDULER.scheduleAtFixedRate(envent(runnable),period,period,timeUnit);
+    }
+    private static Runnable envent(final Runnable runnable){
+        return new Runnable() {
+            @Override
+            public void run() {
+                EXECUTOR.execute(runnable);
+            }
+        };
+    }
+    public static void dispose(){
         try {
             do {
                 EXECUTOR.shutdownNow();

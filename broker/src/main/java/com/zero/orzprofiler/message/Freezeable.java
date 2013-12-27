@@ -12,5 +12,5 @@ public interface Freezeable<T> {
      * freeze by {@link Freezer}
      * @param freezer
      */
-    void FreezeBy(Freezer<T> freezer);
+    void freezeBy(Freezer<T> freezer);
 }
