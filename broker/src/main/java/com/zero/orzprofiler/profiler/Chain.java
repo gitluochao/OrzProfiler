@@ -13,6 +13,7 @@ public interface Chain<Content> extends Disposeable,Dumpable<Content> {
     void post(Message<Content> message);
 
     int size();
+    //test
 
     void trim();
 
