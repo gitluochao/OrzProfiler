@@ -8,4 +8,5 @@ package com.zero.orzprofiler.message;
  * To change this template use File | Settings | File Templates.
  */
 public class AppendMessage<T> {
+
 }

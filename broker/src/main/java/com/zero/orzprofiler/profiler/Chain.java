@@ -8,13 +8,13 @@ import com.zero.orzprofiler.zookeeper.Dumpable;
  * Created by luochao on 14-1-5.
  */
 public interface Chain<Content> extends Disposeable,Dumpable<Content> {
-    Cursor<Content> cursorOf(Object key);
+    Cursor<Message<Content>> cursorOf(Object key);
 
     void post(Message<Content> message);
 
     int size();
     //test
 
-    void trim();
+    int trim();
 
 }
