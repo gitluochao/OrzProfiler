@@ -23,7 +23,6 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="broker" />
-        <module name="client" />
         <module name="OrzProfiler-router" />
         <module name="thrift-idl" />
       </profile>

@@ -21,7 +21,7 @@ public final class Events {
             }
         });
         //jvm close this  run thread
-        thread.setUncaughtExceptionHandler(LogUncaughtExceptionHandler.getInstance());
+        thread.setUncaughtExceptionHandler(LogUncaughtexceptionhandler.getInstance());
         Runtime.getRuntime().addShutdownHook(thread);
 
 

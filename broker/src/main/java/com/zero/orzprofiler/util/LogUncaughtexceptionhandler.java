@@ -8,12 +8,13 @@ import java.lang.Thread.UncaughtExceptionHandler;
  * Date: 13-12-26
  * Time: 下午8:53
  */
-public class LogUncaughtExceptionHandler implements UncaughtExceptionHandler {
-    private final static Logger log = Logger.getLogger(LogUncaughtExceptionHandler.class);
+public class LogUncaughtexceptionhandler implements UncaughtExceptionHandler {
+    private final static Logger log = Logger.getLogger(LogUncaughtexceptionhandler.class);
 
-    public LogUncaughtExceptionHandler() {
+    public LogUncaughtexceptionhandler() {
     }
-    private final static UncaughtExceptionHandler INSTANCE = new LogUncaughtExceptionHandler();
+
+    private final static UncaughtExceptionHandler INSTANCE = new LogUncaughtexceptionhandler();
 
     public static UncaughtExceptionHandler getInstance(){
         return INSTANCE;

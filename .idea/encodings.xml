@@ -3,9 +3,10 @@
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/broker" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/broker/src/main/java/com/zero/orzprofiler/profiler/Coordinators.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/router" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/thrift-idl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thrift-idl/client" charset="UTF-8" />
   </component>
 </project>
 

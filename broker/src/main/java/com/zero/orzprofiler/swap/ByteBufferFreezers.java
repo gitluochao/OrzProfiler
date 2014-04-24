@@ -12,7 +12,7 @@ import java.nio.ByteBuffer;
  * Time: 上午9:58
  */
 public class ByteBufferFreezers extends DisposeableRepository<Category,Freezer<ByteBuffer>> {
-    public ByteBufferFreezers(final File home,final int chunkCapacity , final int chunkbuffer) {
+    public ByteBufferFreezers(final String  home,final int chunkCapacity , final int chunkbuffer) {
         super(new Factory<Category, Freezer<ByteBuffer>>() {
             @Override
             public Freezer<ByteBuffer> newInstance(Category category) {

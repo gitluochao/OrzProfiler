@@ -73,6 +73,7 @@ public class FileChunk implements Chunk {
             public void read(byte[] buffer) throws IOException {
                 FileChannel fileChannel1 = new RandomAccessFile(filePath,"rwd").getChannel();
                 try{
+                    //swap buffer from file / start position
                     fileChannel1.read(ByteBuffer.wrap(buffer),position);
                 }catch (Exception e){
                     throw new IOException(e);
